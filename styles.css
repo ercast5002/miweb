@@ -1,0 +1,325 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: rgb(239, 242, 243);
+}
+
+/* ESTILOS GENERALES */
+
+.fuente-clara {
+  color: #eeeeee;
+}
+
+.fuente-oscura {
+  color: #22211f;
+}
+
+.fuente-acento {
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+.nombre {
+  color: white;
+  /*font-family: 'Roboto Slab', serif;*/
+  font-family: "Roboto Slab", serif;
+  font-size: 15px;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+
+nav ul li {
+  font-size: 14px;
+  line-height: 30px;
+  /* text-transform: uppercase;*/
+}
+
+nav ul li a {
+  color: #eeeeee;
+}
+
+/* ENCABEZADO */
+
+header {
+  background-color: rgba(7, 192, 248, 0.85);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+header nav {
+  height: 80px;
+  float: right;
+}
+
+nav ul.menu {
+  float: right;
+}
+
+nav ul.menu li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul.menu li a {
+  color: #eee;
+  font-size: 25px;
+  /*text-transform: uppercase;*/
+  padding: 7px 7px;
+  font-family: "Roboto Slab", serif;
+}
+
+/* MENU */
+
+.checkbtn {
+  font-size: 25px;
+  color: rgb(7, 125, 236);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  /* Aquí puedes escribir los estilos que se aplicarán en pantallas más pequeñas */
+  header {
+    background-color: rgb(178, 248, 138);
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  .navbar {
+    height: 0vh;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #202020;
+    text-align: center;
+    transition: all 0.5s;
+    overflow: hidden;
+  }
+
+  .navbar ul.menu {
+    float: none;
+    display: block;
+    width: 174px;
+    margin: 0 auto;
+    opacity: 0;
+  }
+
+  .navbar ul.menu li a:hover {
+    color: #b59a61;
+  }
+
+  /* ACTIVE */
+  .navbar.active {
+    height: 100vh;
+  }
+
+  .navbar.active ul.menu {
+    opacity: 1;
+  }
+}
+
+/*contenedor*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 130px 90px 0px;
+}
+
+.car-container {
+  margin: 20px;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+}
+.car-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 120px 0px 0px;
+}
+
+.car-container2 {
+  flex-wrap: wrap;
+  margin: 130px 90px 0px;
+  display: flex;
+}
+
+.car {
+  /*border: 4px dotted teal;*/
+  border-radius: 5%;
+  height: 480px;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+}
+
+.imagina {
+  border: 35px;
+  border-radius: 100%;
+  width: 90%;
+  height: 90%;
+  top: 280px;
+  left: 90px;
+}
+.imagina1 {
+  border: 35px;
+  border-radius: 1%;
+  width: 90%;
+  height: 90%;
+  top: 280px;
+  left: 90px;
+}
+
+.image-container {
+  /*border: 4px dotted teal;*/
+  border-radius: 5%;
+  width: 100%;
+  height: 60%;
+}
+
+.text {
+  margin: 5px 0px 35px;
+  font-size: 32px;
+  width: 80%;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+
+.text1 {
+  width: 120%;
+  font-family: "Oswald", sans-serif;
+}
+
+footer {
+  background-color: #4caf50; /* Verde */
+  color: #ffffff; /* Blanco */
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+.fa-brands {
+  font-size: 2em; /* Tamaño base de los íconos */
+  margin: 5px; /* Espacio entre los íconos */
+  color: rgb(2, 65, 28);
+  box-shadow: 0px 0px 5px rgba(5, 114, 240, 0.3); /* Sombra suave */
+}
+.fa-brands:hover {
+  color: #00ff4c; /* Cambiar a rojo al pasar el mouse */
+}
+.fab {
+  font-size: 2em; /* Tamaño base de los íconos */
+  margin: 5px; /* Espacio entre los íconos */
+  color: rgb(2, 65, 28);
+}
+/* Modificar color al pasar el mouse */
+.fab:hover {
+  color: #00ff4c; /* Cambiar a rojo al pasar el mouse */
+}
+
+/* Añadir efecto de sombra */
+.fab {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.ul {
+  border-radius: 5%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(184, 247, 247);
+}
+
+/* usaremos las medi cueri*/
+@media (min-width: 320) {
+  .car-container {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .car-container {
+    width: 45%;
+  }
+}
+@media (min-width: 320px) {
+  .car-container1 {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .car-container1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) {
+  .text {
+    word-wrap: break-word;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text {
+    word-wrap: break-word;
+  }
+}
+
+@media (min-width: 320px) {
+  .car-container-footer {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .car-container-footer {
+    width: 95%;
+  }
+}
+@media (min-width: 320px) {
+  .ul {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .ul {
+    width: 30%;
+  }
+}
