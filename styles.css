@@ -356,10 +356,16 @@ footer {
   width: 95%;
   margin: 50px auto;
   text-align: center;
-  background-color: rgba(14, 104, 14, 0.7); /* Verde con transparencia */
+  background-color: rgba(232, 238, 232, 0.7); /* Verde con transparencia */
   padding: 20px;
   border-radius: 10px;
 }
+.banner li a{
+ font-size: 30px; /* Cambia el tamaño del texto a 16px */
+}
+.banner li a:hover{
+  color: #03803b;
+ }
 
 .publicaciones {
  
@@ -369,10 +375,22 @@ footer {
 
 .publicacion {
   display: none;
-  opacity: 0;
   transition: opacity 0.5s ease-in-out;
   text-align: center; /* Alinear el texto al centro */
-  padding: 10px; /* Añadir espacio interno */
+  padding: px; /* Añadir espacio interno */
+  height: 300px; /* Altura del contenedor */
+  width: 100%; /* Ancho del contenedor */
+  position: relative; /* Importante para el posicionamiento de la imagen */
+  overflow: hidden; /* Para ocultar cualquier parte de la imagen que se desborde */
+}
+.publicacion img{
+  width: 100%; /* Para garantizar que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Para que la imagen ocupe todo el alto del contenedor */
+  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+  position: absolute; /* Coloca la imagen dentro del contenedor */
+  border-radius: 5px; /* Añadir bordes redondeados */
+  top: 0;
+  left: 0;
 }
 
 .publicacion.active {
@@ -393,3 +411,58 @@ footer {
   font-size: 1.2em;
   transition: font-size 0.3s ease-in-out;
 }
+.botones .siguiente {
+  background-color: transparent; /* Hacer el fondo del botón transparente */
+  border: 1px solid #4767f7; /* Agregar un borde azul */
+  color: #48caf1; /* Color del texto azul */
+  padding: 10px 20px; /* Ajustar el espacio interno del botón */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+  border-radius: 50%; /* Añadir bordes redondeados */
+  margin-top: 10px; /* Añadir espacio superior */
+}
+
+.botones .siguiente:hover {
+  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
+  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
+}
+.botones .anterior {
+  background-color: transparent; /* Hacer el fondo del botón transparente */
+  border: 1px solid #4767f7; /* Agregar un borde blanco */
+  color: #48caf1; /* Color del texto blanco */
+  padding: 10px 20px; /* Ajustar el espacio interno del botón */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+  border-radius: 50%; /* Añadir bordes redondeados */
+  margin-top: 10px; /* Añadir espacio superior */
+}
+
+.botones .anterior:hover {
+  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
+  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
+}
+
+/* Agrega estilos según sea necesario */
+.lista-pdf li:nth-child(n+4) {
+  display: none;
+}
+
+.leer-mas {
+  background-color: transparent; /* Hacer el fondo del botón transparente */
+  border: 1px solid #4767f7; /* Agregar un borde blanco */
+  color: #48caf1; /* Color del texto blanco */
+  padding: 10px 20px; /* Ajustar el espacio interno del botón */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+  border-radius: 5px; /* Añadir bordes redondeados */
+  margin-top: 10px; /* Añadir espacio superior */
+}
+
+.leer-mas:hover {
+  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
+  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
+}
+

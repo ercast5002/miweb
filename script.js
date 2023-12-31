@@ -1,10 +1,12 @@
+
+//menu
 let menu_responsive = document.querySelector(".checkbtn");
 menu_responsive.onclick = function () {
   navBar = document.querySelector(".navbar");
   navBar.classList.toggle("active");
 };
 
-
+// publucaciones
 document.addEventListener("DOMContentLoaded", function() {
   const publicaciones = document.querySelectorAll('.publicacion');
   let index = 0;
@@ -63,3 +65,51 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector('.publicaciones').addEventListener('mouseleave', avanzarAutomaticamente);
 });
 
+// mostrar mas archivos recientes 
+document.addEventListener("DOMContentLoaded", function() {
+    const listaPdf = document.querySelectorAll('.lista-pdf li');
+    const botonLeerMas = document.querySelector('.leer-mas');
+
+    // Ocultar archivos adicionales
+    for (let i = 3; i < listaPdf.length; i++) {
+        listaPdf[i].style.display = 'none';
+    }
+
+    botonLeerMas.addEventListener('click', function() {
+        for (let i = 3; i < listaPdf.length; i++) {
+            if (listaPdf[i].style.display === 'none') {
+                listaPdf[i].style.display = 'list-item';
+                botonLeerMas.textContent = 'Leer menos';
+            } else {
+                listaPdf[i].style.display = 'none';
+                botonLeerMas.textContent = 'Leer más';
+            }
+        }
+    });
+});
+
+// ordenar por fecha
+// Obtén todos los elementos de la lista
+let lista = document.querySelectorAll('.lista-pdf li');
+
+// Convierte el NodeList a un array para poder ordenarlo
+lista = Array.from(lista);
+
+// Ordena el array por la fecha en el href del enlace dentro de cada elemento de la lista
+lista.sort((a, b) => {
+    let fechaA = a.querySelector('a').href.split('_')[1].split('.')[0];
+    let fechaB = b.querySelector('a').href.split('_')[1].split('.')[0];
+    return fechaB - fechaA;
+});
+
+// Si el primer elemento está oculto, remueve la clase 'oculto'
+if (lista[0].classList.contains('oculto')) {
+    lista[0].classList.remove('oculto');
+}
+
+// Ahora, vuelve a agregar los elementos a la lista en el orden correcto
+let ul = document.querySelector('.lista-pdf');
+ul.innerHTML = '';
+for (let li of lista) {
+    ul.appendChild(li);
+}
