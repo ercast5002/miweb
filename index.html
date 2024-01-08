@@ -1,134 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primera web</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c9b87a4bee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi primera web</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://kit.fontawesome.com/c9b87a4bee.js" crossorigin="anonymous"></script>
-  <script src="script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab:wght@200&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-
-<body>
-  <header id="encabezado">
-    <h1 class="logo">
-      <a href="index.html" class="nombre">Ermes Castro Montaño</a>
-      <a href="index.html" class="fuente-acento">Desarrollo Web</a>
-    </h1>
-    <label for="check" class="checkbtn">
-      <i class="fa-solid fa-bars"></i>
-    </label>
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a class="navli" href="index.html">Inicio</a></li>
-        <li><a class="navli" href="#seccion-principal">Acerca de mí</a></li>
-        <li><a class="navli" href="#trabajos">Trabajos</a></li>
-        <li><a class="navli" href="#trabajos">Servicios</a></li>
-        <li><a class="navli" href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="container">
-    <div class="banner">
-      <div class="publicaciones">
-          <div class="publicacion">
-              <h2>Publicación 1</h2>
-              <img src="images-flex/pub.png">
+  <body>
+    <header id="encabezado">
+      <h1 class="logo">
+        <a href="index.html" class="nombre">Ermes Castro Montaño</a>
+        <a href="index.html" class="fuente-acento">Desarrollo Web</a>
+      </h1>
+      <label for="check" class="checkbtn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <nav class="navbar">
+        <ul class="menu">
+          <li><a class="navli" href="index.html">Inicio</a></li>
+          <li><a class="navli" href="#seccion-principal">Acerca de mí</a></li>
+          <li><a class="navli" href="#trabajos">Trabajos</a></li>
+          <li><a class="navli" href="#trabajos">Servicios</a></li>
+          <li><a class="navli" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="banner"  >
+        
+          <div class="publicacion"  >
+            <img    
+          style="width: 100%" src="images-flex/pub3.png" />
+          </div>
+          <div class="publicacion"  >
+            <img  
+          style="width: 100%" src="images-flex/pub1.png" />
           </div>
           <div class="publicacion">
-              <h2>Publicación 2</h2>
-              <img src="images-flex/pub1.png" alt="">
+            <img  
+          style="width: 100%" src="images-flex/pub2.png" />
           </div>
-          <div class="publicacion">
-              <h2>Publicación 3</h2>
-              <img src="images-flex/pub2.png" alt="">
-          </div>
-          <div class="publicacion">
-              <h2>Publicación 4</h2>
-             <img src="images-flex/pub3.png" alt="">
+          <div class="publicacion"  >
+            <img  
+          style="width: 100%"  
+          src="images-flex/pub3.png" />
           </div>
           <!-- Agrega más publicaciones aquí -->
-          <div class="botones">
+          <div class="botones" >
             <button class="anterior">&lt;</button>
             <button class="siguiente">&gt;</button>
-        </div>
+          </div>
+        
       </div>
-    
-  </div>
-  
-    <div class="car-container">
-      <div class="car">
-        <div class="image-container">
-          <h1 style="width:100%;">Hola, Bienvenido a Desarrollo web</h1>
-          <p class="text1" style="font-size: 4rem ">¡Creando conexiones digitales, un clic a la vez!
-          </p>
-        </div>
 
-      </div>
-    </div>
-    <div class="car-container">
-      <div class="car">
-        <div class="image-container"><a href="index.html"> <img class="imagina1" alt="Photo" style="width:100%;"
-              src="images-flex/log.png"> </a> </div>
-
-      </div>
-    </div>
-    <div class="car-container">
-      <div class="car">
-        <div class="image-container"><img class="imagina" alt="Photo" style="width:100%;" src="images-flex/ser.jpg">
+      <div class="car-container">
+        <div class="car">
+          <div class="image-container">
+            <h1 style="width: 100%">Hola, Bienvenido a Desarrollo web</h1>
+            <p class="text1" style="font-size: 4rem">
+              ¡Creando conexiones digitales, un clic a la vez!
+            </p>
+          </div>
         </div>
-        <span class="text">!Potencia tu presencia en línea con un sitio web excepcional!
-          Estoy aquí para convertir tus ideas en realidad digital</span>
       </div>
-    </div>
-    <div class="car-container">
-      <div class="car">
-        <div class="image-container"><img class="imagina" alt="Photo" style="width:100%;" src="images-flex/imagina.jpg">
+      <div class="car-container">
+        <div class="car">
+          <div class="image-container">
+            <a href="index.html">
+              <img
+                class="imagina1"
+                alt="Photo"
+                style="width: 100%"
+                src="images-flex/log.png"
+              />
+            </a>
+          </div>
         </div>
-        <span class="text">Creamos sitios web que no solo se vean increíbles, sino que también impulsen tu negocio.
-        </span>
+      </div>
+      <div class="car-container">
+        <div class="car">
+          <div class="image-container">
+            <img
+              class="imagina"
+              alt="Photo"
+              style="width: 100%"
+              src="images-flex/ser.jpg"
+            />
+          </div>
+          <span class="text"
+            >!Potencia tu presencia en línea con un sitio web excepcional! Estoy
+            aquí para convertir tus ideas en realidad digital</span
+          >
+        </div>
+      </div>
+      <div class="car-container">
+        <div class="car">
+          <div class="image-container">
+            <img
+              class="imagina"
+              alt="Photo"
+              style="width: 100%"
+              src="images-flex/imagina.jpg"
+            />
+          </div>
+          <span class="text"
+            >Creamos sitios web que no solo se vean increíbles, sino que también
+            impulsen tu negocio.
+          </span>
+        </div>
+      </div>
+      <div class="car-container1" style="height: 60vh; width: 100vw">
+        <img
+          class="imagina1"
+          alt="Photo"
+          style="width: 100%"
+          src="images-flex/web.jpg"
+        />
       </div>
     </div>
-    <div class="car-container1" style="height:60vh; width:100vw;">
-      <img class="imagina1" alt="Photo" style="width:100%;" src="images-flex/web.jpg">
-    </div>
-  </div>
 
-  <div class="banner">
-    <div>
-        <h1 style="width:100%;">Archivos Recientes</h1>
+    <div class="archivos">
+      <div>
+        <h1 style="width: 100%">Archivos Recientes</h1>
         <!-- Con javascrpt ornadamos y mostramos la lista de archivos del mas reciente al más antiguo,
         poner la clase oculto a los archivos que agregue para la página solo muestre
          los tres primeros más recientes -->
         <ul class="lista-pdf">
-            <li ><a href="archivos/ACUERDO_20231010.pdf" target="_blank">ACUERDO_20231010</a></li>
-            <li ><a href="archivos/ANEXO_20231008.pdf" target="_blank">ANEXO_20231008</a></li>
-            <li ><a href="archivos/Circular_20231230.pdf" target="_blank">Circular_20231230</a></li>
-            <li class="oculto"><a href="archivos/Guia_20231228.pdf" target="_blank">Guia_20231228</a></li>
-            <li class="oculto"><a href="archivos/ejemplo_pdf5.pdf" target="_blank">Nombre del Archivo 5</a></li>
-            <!-- Agrega más archivos PDF aquí -->
+          <li>
+            <a href="archivos/ACUERDO_20231010.pdf" target="_blank"
+              >ACUERDO_20231010</a
+            >
+          </li>
+          <li>
+            <a href="archivos/ANEXO_20231008.pdf" target="_blank"
+              >ANEXO_20231008</a
+            >
+          </li>
+          <li>
+            <a href="archivos/Circular_20231230.pdf" target="_blank"
+              >Circular_20231230</a
+            >
+          </li>
+          <li class="oculto">
+            <a href="archivos/Guia_20231228.pdf" target="_blank"
+              >Guia_20231228</a
+            >
+          </li>
+          <li class="oculto">
+            <a href="archivos/ejemplo_pdf5.pdf" target="_blank"
+              >Nombre del Archivo 5</a
+            >
+          </li>
+          <!-- Agrega más archivos PDF aquí -->
         </ul>
         <button class="leer-mas">Leer más</button>
+      </div>
     </div>
-</div>
 
-    
-  <footer>
-    <div class="social-icons">
-        <a href="https://twitter.com/TuUsuario" target="_blank" class="fa-brands fa-x-twitter"></a>
-        <a href="https://www.facebook.com/TuPagina" target="_blank" class="fab fa-facebook-square"></a>
-        <a href="https://www.instagram.com/TuUsuario" target="_blank" class="fab fa-instagram-square"></a>
-
-    </div>
-    <p>Derechos de autor © 2023</p>
-    <p>Ermes Castro Montaño</p>
-</footer>
-</body>
-
+    <footer>
+      <div class="social-icons">
+        <a
+          href="https://twitter.com/TuUsuario"
+          target="_blank"
+          class="fa-brands fa-x-twitter"
+        ></a>
+        <a
+          href="https://www.facebook.com/TuPagina"
+          target="_blank"
+          class="fab fa-facebook-square"
+        ></a>
+        <a
+          href="https://www.instagram.com/TuUsuario"
+          target="_blank"
+          class="fab fa-instagram-square"
+        ></a>
+      </div>
+      <p>Derechos de autor © 2023</p>
+      <p>Ermes Castro Montaño</p>
+    </footer>
+  </body>
 </html>

@@ -163,6 +163,7 @@ nav ul.menu li a {
   width: 95%;
   display: flex;
   justify-content: center;
+  margin-top:380px;
 }
 .car-container1 {
   display: flex;
@@ -206,6 +207,7 @@ h1 {
   height: 90%;
   top: 280px;
   left: 90px;
+  
 }
 
 .image-container {
@@ -270,7 +272,145 @@ footer {
   background-color: rgb(184, 247, 247);
 }
 
+
+.banner {
+  margin: 20px;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  
+}
+.banner li a{
+ font-size: 30px; /* Cambia el tamaño del texto a 16px */
+}
+.banner li a:hover{
+  color: #03803b;
+ }
+ .publicacion {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  width: 95%; /* Ancho del contenedor */
+  height: 100%; /* Para que la imagen ocupe todo el alto del contenedor */
+  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
+  position: absolute; /* Coloca la imagen dentro del contenedor */
+}
+
+.publicacion img{
+  width: 95%; /* Ancho del contenedor */
+  border-radius: 5%;
+}
+
+.publicacion.active {
+  display: block;
+  opacity: 1;
+}
+
+.publicacion h2,
+.publicacion p {
+  width: 100%; /* Ocupar el 100% del ancho */
+  box-sizing: border-box; /* Incluir el padding en el ancho */
+  font-size: 4rem;
+}
+
+/* Efecto hover para aumentar el tamaño del texto en las publicaciones */
+.publicacion:hover h2,
+.publicacion:hover p {
+  font-size: 1.2em;
+  transition: font-size 0.3s ease-in-out;
+}
+
+
+
+.botones{
+  margin-bottom: 220px;
+  gap: 10px; /* Espacio entre los botones */
+  position: absolute; /* Esto hace que el div se posicione en relación al div más cercano con posición relativa */
+  bottom: 10px; /* Esto hace que el div flote 10px por encima del borde inferior del div */
+  justify-content: center; 
+}
+.botones .siguiente {
+  background-color: transparent; /* Hacer el fondo del botón transparente */
+  border: 1px solid #4767f7; /* Agregar un borde azul */
+  color: #48caf1; /* Color del texto azul */
+  padding: 10px 20px; /* Ajustar el espacio interno del botón */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+  border-radius: 50%; /* Añadir bordes redondeados */
+  margin-top: 10px; /* Añadir espacio superior */
+ 
+}
+
+.botones .siguiente:hover {
+  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
+  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
+}
+.botones .anterior {
+  background-color: transparent; /* Hacer el fondo del botón transparente */
+  border: 1px solid #4767f7; /* Agregar un borde blanco */
+  color: #48caf1; /* Color del texto blanco */
+  padding: 10px 20px; /* Ajustar el espacio interno del botón */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+  border-radius: 50%; /* Añadir bordes redondeados */
+  margin-top: 10px; /* Añadir espacio superior */
+}
+
+.botones .anterior:hover {
+  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
+  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
+}
+
+
+ .archivos{
+  width: 95%;
+  margin: 50px auto;
+  text-align: center;
+  background-color: rgba(232, 238, 232, 0.7); /* Verde con transparencia */
+  padding: 20px;
+  border-radius: 10px;
+ }
+ .archivos li a{
+  font-size: 30px; /* Cambia el tamaño del texto a 16px */
+ }
+ .archivos li a:hover{
+  color: #03803b;
+ }
+
+/*.publicaciones {
+ 
+  padding: 20px;
+  border-radius: 10px;
+}*/
+
+
+/* Agrega estilos según sea necesario */
+.lista-pdf li:nth-child(n+4) {
+  display: none;
+}
+
+
+.leer-mas {
+  background-color: transparent; /* Hacer el fondo del botón transparente */
+  border: 1px solid #4767f7; /* Agregar un borde blanco */
+  color: #48caf1; /* Color del texto blanco */
+  padding: 10px 20px; /* Ajustar el espacio interno del botón */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+  border-radius: 5px; /* Añadir bordes redondeados */
+  margin-top: 10px; /* Añadir espacio superior */
+}
+
+.leer-mas:hover {
+  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
+  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
+}
+
+
 /* usaremos las medi cueri*/
+
 @media (min-width: 320) {
   .car-container {
     width: 35%;
@@ -283,14 +423,31 @@ footer {
   }
 }
 @media (min-width: 320px) {
-  .car-container1 {
+  .car-container1{
     width: 95%;
+    
   }
 }
 
 @media (min-width: 1024px) {
-  .car-container1 {
+  .car-container1{
     width: 100%;
+    
+  }
+}
+
+
+@media (min-width: 320px) {
+   .banner .publicacion img{
+    width: 95%;
+   
+  }
+}
+
+@media (min-width: 1024px) {
+   .banner .publicacion img{
+    width: 100%;
+    
   }
 }
 
@@ -330,139 +487,5 @@ footer {
   }
 }
 
-/* Estilos para dispositivos de pantalla más pequeña */
-@media screen and (max-width: 768px) {
-  .banner {
-      width: 90%;
-      padding: 10px;
-  }
 
-  .publicaciones {
-      background-color: white; /* Aumentar la transparencia */
-      padding: 10px;
-  }
-
-  .publicacion {
-      padding: 8px; /* Reducir el espacio interno */
-  }
-
-  .publicacion h2,
-  .publicacion p {
-      font-size: 20px; /* Tamaño de fuente más pequeño */
-  }
-}
-
-.banner {
-  width: 95%;
-  margin: 50px auto;
-  text-align: center;
-  background-color: rgba(232, 238, 232, 0.7); /* Verde con transparencia */
-  padding: 20px;
-  border-radius: 10px;
-}
-.banner li a{
- font-size: 30px; /* Cambia el tamaño del texto a 16px */
-}
-.banner li a:hover{
-  color: #03803b;
- }
-
-.publicaciones {
  
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.publicacion {
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-  text-align: center; /* Alinear el texto al centro */
-  padding: px; /* Añadir espacio interno */
-  height: 300px; /* Altura del contenedor */
-  width: 100%; /* Ancho del contenedor */
-  position: relative; /* Importante para el posicionamiento de la imagen */
-  overflow: hidden; /* Para ocultar cualquier parte de la imagen que se desborde */
-}
-.publicacion img{
-  width: 100%; /* Para garantizar que la imagen ocupe todo el ancho del contenedor */
-  height: 100%; /* Para que la imagen ocupe todo el alto del contenedor */
-  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin deformarse */
-  position: absolute; /* Coloca la imagen dentro del contenedor */
-  border-radius: 5px; /* Añadir bordes redondeados */
-  top: 0;
-  left: 0;
-}
-
-.publicacion.active {
-  display: block;
-  opacity: 1;
-}
-
-.publicacion h2,
-.publicacion p {
-  width: 100%; /* Ocupar el 100% del ancho */
-  box-sizing: border-box; /* Incluir el padding en el ancho */
-  font-size: 4rem;
-}
-
-/* Efecto hover para aumentar el tamaño del texto en las publicaciones */
-.publicacion:hover h2,
-.publicacion:hover p {
-  font-size: 1.2em;
-  transition: font-size 0.3s ease-in-out;
-}
-.botones .siguiente {
-  background-color: transparent; /* Hacer el fondo del botón transparente */
-  border: 1px solid #4767f7; /* Agregar un borde azul */
-  color: #48caf1; /* Color del texto azul */
-  padding: 10px 20px; /* Ajustar el espacio interno del botón */
-  font-size: 1.2em; /* Tamaño de fuente más grande */
-  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
-  border-radius: 50%; /* Añadir bordes redondeados */
-  margin-top: 10px; /* Añadir espacio superior */
-}
-
-.botones .siguiente:hover {
-  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
-  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
-}
-.botones .anterior {
-  background-color: transparent; /* Hacer el fondo del botón transparente */
-  border: 1px solid #4767f7; /* Agregar un borde blanco */
-  color: #48caf1; /* Color del texto blanco */
-  padding: 10px 20px; /* Ajustar el espacio interno del botón */
-  font-size: 1.2em; /* Tamaño de fuente más grande */
-  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
-  border-radius: 50%; /* Añadir bordes redondeados */
-  margin-top: 10px; /* Añadir espacio superior */
-}
-
-.botones .anterior:hover {
-  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
-  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
-}
-
-/* Agrega estilos según sea necesario */
-.lista-pdf li:nth-child(n+4) {
-  display: none;
-}
-
-.leer-mas {
-  background-color: transparent; /* Hacer el fondo del botón transparente */
-  border: 1px solid #4767f7; /* Agregar un borde blanco */
-  color: #48caf1; /* Color del texto blanco */
-  padding: 10px 20px; /* Ajustar el espacio interno del botón */
-  font-size: 1.2em; /* Tamaño de fuente más grande */
-  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
-  border-radius: 5px; /* Añadir bordes redondeados */
-  margin-top: 10px; /* Añadir espacio superior */
-}
-
-.leer-mas:hover {
-  background-color: #fff; /* Cambiar el fondo al pasar sobre el botón */
-  color: #000; /* Cambiar el color del texto al pasar sobre el botón */
-}
-
